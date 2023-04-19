@@ -1,0 +1,30 @@
+<div class="row">
+    <div title="{[print(xabber.getString('omemo__dialog_fingerprints__textfield_device_id_tooltip', [id, (label ? label : 'none')]))]}" class="device-wrap">
+        {[if (edit_setting) {]}
+        <input class="hidden set-label one-line" {[if (label) {]}value="{{label}}"{[}]}>{[}]}
+        {[if (label) {]}<div class="one-line label">{{label}}</div>{[}]}
+        <div class="device-id one-line">{{id}}</div>
+        {[if (!label) {]}<div class="device-id-label">{[print(xabber.getString("omemo__dialog_fingerprints__label_device_id"))]}</div>{[}]}
+        {[if (edit_setting) {]}<div class="set-label-label hidden">{[print(xabber.getString("omemo__dialog_fingerprints__label_set_label"))]}</div>{[}]}
+    </div>
+    <div class="fingerprint-wrap">
+    <div title="Device fingerprint" class="fingerprint">{{fingerprint}}</div>
+    {[if (old_fingerprint){]}<div title="Old device fingerprint" class="old-fingerprint">{{old_fingerprint}}</div>{[}]}
+    </div>
+    <div data-trust="{{trust}}" class="buttons">
+        {[if (trust !== null) {]}
+        <div class="dropdown-button" data-activates="select-status-{{id}}">
+            <div class="trust-item-wrap btn-main btn-flat">
+                <div data-value="{{trust}}">{[print(xabber.getString(`omemo__dialog_fingerprints__button_${trust}`))]}</div>
+            </div>
+        </div>
+        <div id="select-status-{{id}}" class="dropdown-content noselect">
+            <div data-value="ignore" class="btn-main text-color-grey-500 btn-ignore btn-flat">{[print(xabber.getString("omemo__dialog_fingerprints__button_ignore"))]}</div>
+            <div data-value="trust" class="btn-main btn-flat btn-trust text-color-green-500">{[print(xabber.getString("omemo__dialog_fingerprints__button_trust"))]}</div>
+            {[if (delete_button){]}
+            <div class="btn-main btn-flat btn-delete text-color-red-500">{[print(xabber.getString("omemo__dialog_fingerprints__button_delete"))]}</div>
+            {[}]}
+        </div>
+        {[}]}
+    </div>
+</div>

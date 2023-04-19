@@ -1,0 +1,260 @@
+/********************************************/
+/*
+Responsiveness of this project should be done in two stages.
+The first stage is JS.
+The second stage is CSS.
+is difficult.....
+*/
+/********************************************/
+
+
+
+/*
+320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV 
+*/
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 100px) {
+    .roster-right-container{
+        /* display: none; */
+        width: 44px;
+        height: 45px;
+        background-color: transparent;
+    }
+    [data-theme="dark"].roster-right-container,[data-theme="light"].roster-right-container {
+        background-color: transparent;
+    }
+    .roster-right-container:hover{
+        width: 100%;
+        height: 100%;
+    }
+    .toolbar{
+        /* display: none; */
+        height: 45px;
+    }
+    .toolbar:hover{
+        height: 100%;
+        background-color: black;
+    }
+    .toolbar:hover .toolbar-item:not(:first-child),.toolbar:hover .toolbar-bottom,.toolbar:hover .add-something-wrap,.toolbar:hover .divider,.toolbar:hover .accounts-wrap{
+        display: block;
+    }
+    .toolbar .toolbar-item:not(:first-child),.toolbar .toolbar-bottom,.toolbar .add-something-wrap,.toolbar .divider,.toolbar .accounts-wrap{
+        display: none;
+    }
+    .main-wrap {
+        margin: 50px 0px 0px 0px;
+        height: calc(100% - 50px);
+    }
+    .ShowInSmallerThan519{
+        display: block;
+    }
+ }
+ @media only screen and (min-width: 519px) {
+    .roster-right-container,.toolbar {
+        height:100%;
+    }
+    .toolbar .toolbar-item:not(:first-child),.toolbar .toolbar-bottom,.toolbar .add-something-wrap,.toolbar .divider,.toolbar .accounts-wrap{
+        display: block;
+    }
+    .main-wrap {
+        margin: 0px 49px 0px 0px;
+        height:100%;
+    }
+    .ShowInSmallerThan519{
+        display: none;
+    }
+}
+
+/*************************************************************************************************/
+/* The following codes are related to the responsiveness of the middle  page, settings and user */
+/***********************************************************************************************/
+ @media only screen and (min-width: 100px) {
+    .account-settings-left-container{
+        float: right;
+        width:100%; 
+        /*28.5%*/
+    }
+    .account-settings-left-container .account-settings-left-wrap,
+    .account-settings-left-container .account-settings-left-wrap .left-column{
+        /* display: none; */
+        height: 160px;
+    }
+    .account-settings-left-container .account-settings-left-wrap .status-wrap{
+        padding: 84px 0px 0px 0px;
+        right: 89px;
+        position: absolute;
+    }
+    .account-settings-left-container .account-settings-left-wrap .left-column .settings-tabs-wrap
+    {
+        display: none;
+    }
+    .account-settings-right-container{
+        position: absolute;
+        top: 162px;
+    }
+
+    .panel-wrap>.settings-panel>.left-column.noselect {
+        
+        display: none;
+    }
+    
+    .panel-wrap>.settings-panel>.right-column.noselect {
+        float: right;
+        width:100%;
+    }
+    .settings-panel .main-info-wrap {
+        display: inline-grid;
+        grid-template-columns: 100px auto;
+    }
+    .settings-panel .main-info-wrap .picture-wrap {
+        height: 70px;
+        margin: 10px;
+    }
+    .account-settings-panel .main-info-wrap .avatar-wrap {
+        width: 90px;
+        height: 90px;
+        top: 11px;
+    }
+    .settings-block-wrap.interface_language .description {
+        right: 60%;
+    }
+ }
+ @media only screen and (min-width: 915px) {
+    .account-settings-left-container .account-settings-left-wrap,
+    .account-settings-left-container .account-settings-left-wrap .left-column{
+        display: block;
+        height: 100%;
+    }
+    .account-settings-left-container .account-settings-left-wrap .left-column .settings-tabs-wrap
+    {display: block;}
+
+    .account-settings-left-container,
+    .panel-wrap>.settings-panel>.left-column.noselect {
+        display: block;
+        float: right;
+        width: 28.5%;
+    }
+    .account-settings-right-container{
+        position: initial;
+        top: 164px;
+    }
+    .account-settings-right-container,
+    .panel-wrap>.settings-panel>.right-column.noselect {
+        float: right;
+        width: 71.5%;
+    }
+    .settings-panel .settings-tab {
+        height: 48px;
+        padding: 13px 60px 14px 14px;
+    }
+    .settings-panel .settings-tab .mdi{
+        position: absolute;
+        top: 12px;
+        right: 24px;
+    }
+    .settings-panel .main-info-wrap {
+        display: inline-grid;
+        grid-template-columns: 100px auto;
+        min-height: 144px;
+    }
+    .settings-panel .main-info-wrap .picture-wrap {
+        height: 96px;
+    }
+    .account-settings-panel .main-info-wrap .avatar-wrap {
+        width: 96px;
+        height: 96px;
+        top: 0px;
+    }
+    .settings-block-wrap.interface_language .description {
+        right: 60%;
+    }
+ } 
+/*********************************************************************************************/
+/* The above codes are related to the responsiveness of the middle  page, settings and user */
+/*******************************************************************************************/
+
+@media only screen and (min-width: 100px) {
+    .left-panel-wrap {
+        width: 100%;
+        overflow: hidden;
+    }
+    div.left-panel-wrap:has(div.list-item.active){
+        display: none;
+    }
+    .right-panel-wrap {
+        width: 100%;
+    }
+
+}
+@media only screen and (min-width: 519px) {
+    .left-panel-wrap {
+        width: 28.5%;
+        overflow: hidden;
+    }
+    .right-panel-wrap {
+        width: 71.5%;
+    }
+
+}
+
+
+/***************************************/
+/* notifications-placeholder optimize */
+/*************************************/
+@media only screen and (min-width: 100px) {
+    .wide-placeholders-wrap .btn-request-notifications.btn-flat.btn-dark.btn-main,
+    .wide-placeholders-wrap .btn-enable.btn-flat.hover-ground-color-500.btn-dark.btn-main{
+        visibility: hidden;
+    }
+    .wide-placeholders-wrap .btn-request-notifications.btn-flat.btn-dark.btn-main:hover,
+    .wide-placeholders-wrap i.mdi.mdi-22px.mdi-close:hover,
+    .wide-placeholders-wrap i.mdi.mdi-22px.mdi-close.btn-escape:hover,
+    .wide-placeholders-wrap .btn-enable.btn-flat.hover-ground-color-500.btn-dark.btn-main:hover {
+        color: #f44336 !important;
+    }
+    .wide-placeholders-wrap .btn-request-notifications.btn-flat.btn-dark.btn-main::before,
+    .wide-placeholders-wrap .btn-enable.btn-flat.hover-ground-color-500.btn-dark.btn-main::before {
+        content: "\F12C";
+        visibility: visible;
+        font: normal normal normal 24px/1 "Material Design Icons";
+        text-rendering: auto;
+        transform: translate(0, 0);
+        font-size: 22px;
+        text-indent: 0;
+        display: block;
+        line-height: initial;
+        padding-top: 5px;
+    }
+}
+@media only screen and (min-width: 730px) {
+    .wide-placeholders-wrap .btn-request-notifications.btn-flat.btn-dark.btn-main,
+    .wide-placeholders-wrap .btn-enable.btn-flat.hover-ground-color-500.btn-dark.btn-main{
+        visibility: visible;
+    }
+    .wide-placeholders-wrap .btn-request-notifications.btn-flat.btn-dark.btn-main:hover,
+    .wide-placeholders-wrap i.mdi.mdi-22px.mdi-close:hover,
+    .wide-placeholders-wrap i.mdi.mdi-22px.mdi-close.btn-escape:hover,
+    .wide-placeholders-wrap .btn-enable.btn-flat.hover-ground-color-500.btn-dark.btn-main:hover {
+        color: #212121 !important;
+    }
+    .wide-placeholders-wrap .btn-request-notifications.btn-flat.btn-dark.btn-main::before, 
+    .wide-placeholders-wrap .btn-enable.btn-flat.hover-ground-color-500.btn-dark.btn-main::before {
+        visibility: visible;
+        font: normal normal normal 24px/1 "Material Design Icons";
+        text-rendering: auto;
+        transform: translate(0, 0);
+        font-size: 22px;
+        text-indent: 0;
+        display: contents;
+        line-height: -moz-block-height;
+        padding-top: 0px;
+        content: "";
+    }
+}
+/***************************************/
+/* notifications-placeholder optimize */
+/*************************************/

@@ -1,0 +1,27 @@
+<div class="modal-content-wrap">
+    <div class="modal-header">
+        <span>{[print(xabber.getString("account_add"))]}</span>
+    </div>
+    <div class="modal-content">
+        <div class="row login-form-field">
+            <div class="input-field">
+                <input id="jid" type="text" name="jid">
+                <label for="jid">{[print(xabber.getString("account_user_name"))]}</label>
+                <span class="errors fixed"></span>
+            </div>
+            <div class="input-field">
+                <input id="password" type="password" name="password">
+                <label for="password">{[print(xabber.getString("account_password"))]}</label>
+                <span class="errors fixed"></span>
+            </div>
+        </div>
+        <div class="sync-option">
+            <input type="checkbox" class="filled-in" id="{{view.cid}}_sync_acc"/>
+            <label for="{{view.cid}}_sync_acc">{[print(xabber.getString("sync_with_xabber_account"))]}</label>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn-flat btn-main btn-add">{[print(xabber.getString("add"))]}</button>
+        <button class="btn-flat btn-main btn-dark btn-cancel">{[print(xabber.getString("cancel"))]}</button>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" class="RTL" dir="rtl">
+<head>
+    <title>Xabber Web</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    <link rel="manifest" href="manifest.json">
+    <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase-messaging.js"></script>
+    <script src="./dist/libsignal-protocol.js"></script>
+    <!-- <link rel="stylesheet" href="dist/xabber.css?v3.1.0"> -->
+    <link rel="stylesheet" href="MyCode/xabber RTL.css?v2.1.0">
+    <link rel="stylesheet" href="MyCode/Responsive.css">
+
+    <link href="./dist/quill.snow.css" rel="stylesheet">
+    <script src="./dist/quill.min.js"></script>
+    <script src="MyCode/MyApp.js"></script>
+    <script src="dist/xabber.js?v2.1.0"></script>
+    <script>
+        require(['xabber','xabber-ui'], function (xabber,ui) {
+            xabber.configure({
+                // Please specify location of xabber-websocket service,
+                // e.g. 'wss://web.xabber.com/websocket
+                // To run your own server visit https://github.com/redsolution/xabber-websocket
+                // loginPageData:{
+                //     UserName:'hs',
+                //     Password:'123456789'
+                // },
+                TheXmppIDCompleter:"@localhost",
+                CONNECTION_URL: 'http://localhost:7070/http-bind/',
+                //'https://openfire.raimun.io:7443/http-bind/',
+                LOG_LEVEL: 'WARN',
+                REGISTER_XMPP_ACCOUNT:false, //اضافات لاگین را حذف می کند
+                USE_SOCIAL_AUTH:false,//سوشال مدیا را از لاگین حذف می کند
+                
+                CLIENT_NAME: 'RRRRRRR for Web', //نامی که سامانه نمایش می دهد
+                SHORT_CLIENT_NAME: 'RRRRRRRR',// نام کوتاه
+                CLIENT_LOGO: 'images/xabber-logo-96.png', //لوگو
+                TOOLBAR_LOGO: 'images/xabber-logo.png',//لوگو کوچک
+                ENABLE_XABBER_ACCOUNT: false, // متصل شدن به اکانت زابر
+                SCREEN_ABOUT: false, //عدم نمایش درباره ما
+            });
+            ui(xabber);
+            console.log(ui);
+            xabber.start();
+        });
+    </script>
+</head>
+
+<body>
+<div class="login-container"></div>
+</body>
+
+</html>

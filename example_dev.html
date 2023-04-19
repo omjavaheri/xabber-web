@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Xabber Web</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    <link rel="manifest" href="manifest.json">
+    <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase-messaging.js"></script>
+    <script src="./dist/libsignal-protocol.js"></script>
+    <link rel="stylesheet" href="css/materialdesignicons.css"/>
+    <link rel="stylesheet" href="node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.css"/>
+    <link rel="stylesheet" href="css/materialize.css"/>
+    <link rel="stylesheet" href="css/color-scheme.css"/>
+    <link rel="stylesheet" href="css/xabber.css"/>
+    <link href="./dist/quill.snow.css" rel="stylesheet">
+    <script src="./dist/quill.min.js"></script>
+    <script src="node_modules/requirejs/require.js"></script>
+    <script src="config.js"></script>
+    <script>
+        require(["xabber"], function (xabber) {
+            xabber.configure({
+                // Please specify location of xabber-websocket service,
+                // e.g. 'wss://web.xabber.com/websocket
+                // To run your own server visit https://github.com/redsolution/xabber-websocket
+                CONNECTION_URL: '',
+                LOG_LEVEL: 'INFO',
+                DEBUG: true,
+                STORAGE_NAME_ENDING: 'dev'
+            });
+            xabber.start();
+        });
+    </script>
+</head>
+
+<body>
+<div class="login-container"></div>
+</body>
+
+</html>

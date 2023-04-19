@@ -1,0 +1,83 @@
+    <div class="left-column ground-color-900 noselect">
+        <div class="main-info-wrap account-main-info-wrap">
+            <!--<i title="Back to settings" class="mdi mdi-arrow-left mdi-28px back-to-settings"></i>-->
+            <div class="picture-wrap">
+                <div class="avatar-wrap">
+                    <div class="circle-avatar">
+                        <img/>
+                        <input type="file"/>
+                        <svg class="set-groupchat-avatar" viewBox="0 0 24 24">
+                            <path d="M4,4H7L9,2H15L17,4H20A2,2 0 0,1 22,6V18A2,2 0 0,1 20,20H4A2,2 0 0,1 2,18V6A2,2 0 0,1 4,4M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9Z" />
+                        </svg>
+                        <div class="preloader-wrap"><div class="preloader-wrapper preloader-32px visible">
+                            <div class="spinner-layer">
+                                <div class="circle-clipper left">
+                                    <div class="circle"></div>
+                                </div>
+                                <div class="gap-patch">
+                                    <div class="circle"></div>
+                                </div>
+                                <div class="circle-clipper right">
+                                    <div class="circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="status"></div>
+                </div>
+            </div>
+            <div class="name-wrap">
+                <div class="name"></div>
+            </div>
+            <div class="status-wrap"></div>
+        </div>
+        <div class="settings-tabs-wrap">
+            <div class="settings-tab" data-block-name="connection">
+                <i class="mdi mdi-24px mdi-settings"></i>
+                <div class="settings-block-name one-line">{[print(xabber.getString("account_connection_settings"))]}</div>
+            </div>
+            <div class="settings-tab" data-block-name="tokens">
+                <i class="mdi mdi-24px mdi-key"></i>
+                <div class="settings-block-name one-line">{[print(xabber.getString("account_active_sessions"))]}</div>
+            </div>
+            <div class="settings-tab" data-block-name="synchronization">
+                <i class="mdi mdi-24px mdi-sync"></i>
+                <div class="settings-block-name one-line">{[print(xabber.getString("account_sync"))]}</div>
+            </div>
+            <div class="settings-tab" data-block-name="color-scheme">
+                <i class="mdi mdi-24px mdi-palette"></i>
+                <div class="settings-block-name one-line">{[print(xabber.getString("account_color_scheme"))]}</div>
+            </div>
+            <div class="settings-tab" data-block-name="xmpp-resources">
+                <svg class="mdi mdi-24px mdi-svg-template" data-svgname="ic-jabber"></svg>
+                <div class="settings-block-name one-line">{[print(xabber.getString("account_xmpp_resources"))]}</div>
+            </div>
+            <div class="settings-tab" data-block-name="vcard">
+                <i class="mdi mdi-24px mdi-account-card-details"></i>
+                <div class="settings-block-name one-line">{[print(xabber.getString("settings_account__section_header_vcard"))]}</div>
+            </div>
+            <div class="settings-tab" data-block-name="omemo-info">
+                <i class="mdi mdi-24px mdi-fingerprint"></i>
+                <div class="settings-block-name one-line">{[print(xabber.getString("omemo__settings__menu_item"))]}</div>
+            </div>
+            <div class="settings-tab" data-block-name="server-info">
+                <i class="mdi mdi-24px mdi-information"></i>
+                <div class="settings-block-name one-line">{[print(xabber.getString("settings_account__section_header_server_info"))]}</div>
+            </div>
+            <div class="settings-tab" data-block-name="blocklist-info">
+                <i class="mdi mdi-24px mdi-block-helper"></i>
+                <div class="settings-block-name one-line">{[print(xabber.getString("blocked_contacts"))]}</div>
+            </div>
+            <div class="settings-tab" data-block-name="groups-info">
+                <svg class="mdi mdi-24px mdi-svg-template" data-svgname="circles"></svg>
+                <div class="settings-block-name one-line">{[print(xabber.getString("settings_account__section_header_circles"))]}</div>
+            </div>
+        </div>
+        <div class="settings-tabs-bottom-wrap ground-color-900">
+            <div class="settings-tab delete-account">
+                <i class="mdi mdi-24px mdi-logout-variant"></i>
+                <div class="settings-block-name">{[print(xabber.getString("settings_account__button_quit_account"))]}</div>
+            </div>
+        </div>
+    </div>

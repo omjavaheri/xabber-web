@@ -1,0 +1,43 @@
+    <div class="login-panel-head noselect">
+        <img src="{{CLIENT_LOGO}}" class="client-logo">
+        <span class="client-name">{{SHORT_CLIENT_NAME}}</span>
+    </div>
+    <div class="login-panel-form xmpp-login-form noselect">
+        <div class="input-field">
+            <input id="jid" type="text" name="jid">
+            <label for="jid">{[print(xabber.getString("hint_xmpp_id"))]}</label>
+            <span class="errors fixed one-line"></span>
+        </div>
+        <div class="input-field">
+            <input id="password" type="password" name="password">
+            <label for="password">{[print(xabber.getString("hint_pass"))]}</label>
+            <span class="errors fixed one-line"></span>
+        </div>
+        <div class="input-field buttons-wrap">
+            {[if (constants.REGISTER_XMPP_ACCOUNT){]}<a href="{{constants.REGISTER_XMPP_ACCOUNT_URL}}" target="_blank" class="btn-flat btn-main btn-forgot-password one-line">{[constants.REGISTER_XMPP_ACCOUNT_TEXT || print(xabber.getString("xmpp_login__button_register_account"))]}</a>{[}]}
+            <button class="btn btn-flat btn-main-filled btn-log-in">{[print(xabber.getString("xabber_account__social_links__button_log_in"))]}</button>
+        </div>
+        <div class="clearfix"></div>
+        {[if (constants.USE_SOCIAL_AUTH){]}
+        <div class="social-auth-wrap">
+            <div class="social-header">
+                <div class="divider"></div>
+                <div class="social-header-tip one-line">{[print(xabber.getString("tutorial_title_8"))]}</div>
+            </div>
+            <div class="social-buttons">
+                <div class="btn-social google-color" data-provider="google">
+                    <i class="mdi mdi-28px mdi-google-plus"></i>
+                </div>
+                <div class="btn-social facebook-color" data-provider="facebook">
+                    <i class="mdi mdi-28px mdi-facebook"></i>
+                </div>
+                <div class="btn-social twitter-color" data-provider="twitter">
+                    <i class="mdi mdi-28px mdi-twitter"></i>
+                </div>
+                <div class="btn-social xabber-color" data-provider="email">
+                    <i class="mdi mdi-28px mdi-at"></i>
+                </div>
+            </div>
+        </div>
+        {[}]}
+    </div>

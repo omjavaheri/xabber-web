@@ -1,0 +1,13 @@
+<div class="list-item {{status}}-user" data-jid="{{jid}}">
+    <div class="member-item">
+        <div class="circle-avatar"/>
+        <p title="{{jid}}" class="one-line">{{jid}}</p>
+        {[if (status == 'invitations') {]}
+        <div title='{[print(xabber.getString("groupchat_revoke"))]}' class="revoke-invitation">
+            {[}else{]}
+            <div title='{[print(xabber.getString("groupchat_unblock"))]}' class="unblock-user">
+                {[}]}
+                <i class="mdi mdi-20px mdi-close"></i>
+            </div>
+    </div>
+</div>
